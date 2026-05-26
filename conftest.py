@@ -1,23 +1,12 @@
 import pytest
+import os
 from playwright.sync_api import sync_playwright
 
-@pytest.fixture(scope="session")
-def browser():
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
-        yield browser
-        browser.close()
-        
-@pytest.fixture
-def page(browser):
-    page = browser.new_page()
-    yield page
-    page.close()        
-    
 @pytest.fixture(scope="function")
 def page():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        headless = bool(os.getenv("CI", False))
+        browser = p.chromium.launch(headless=headless)
         context = browser.new_context()
         context.tracing.start(
             screenshots=True,
