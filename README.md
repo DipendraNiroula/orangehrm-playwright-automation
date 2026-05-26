@@ -1,4 +1,4 @@
-# OrangeHRM Automation Testing with Playwright & Python
+  # OrangeHRM Automation Testing with Playwright & Python
          
 An automated test suite built with **Playwright** and **Python** to test the [OrangeHRM](https://opensource-demo.orangehrmlive.com/) HR management web application. The project applies real-world QA practices including the **Page Object Model (POM)**, **data-driven testing** using CSV and JSON, and **Playwright tracing** for debugging.
 
