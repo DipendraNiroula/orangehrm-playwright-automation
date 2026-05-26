@@ -160,3 +160,4 @@ Tests run in **headed Chromium** with **200ms slow motion** for visibility, and 
 **Dipendra Niroula**  
 QA Intern | Playwright · Python · Postman · JMeter  
 [LinkedIn](https://www.linkedin.com/in/) · [GitHub](https://github.com/DipendraNiroula)
+ 
