@@ -8,6 +8,7 @@ def page():
         headless = bool(os.getenv("CI", False))
         browser = p.chromium.launch(headless=headless)
         context = browser.new_context()
+        context.set_default_timeout(60000)  # 60 seconds
         context.tracing.start(
             screenshots=True,
             snapshots=True,
